@@ -1,4 +1,4 @@
 acp-forked
 ==========
 
-A personal fork of an old version of AutoComplPop.
+This is a fork of AutoComplPop that adds JavaScript and PHP support.
