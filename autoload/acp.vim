@@ -210,6 +210,8 @@ function acp#onPopupPost()
     silent let s:original_shift_tab = maparg("<S-Tab>", "i", 0, 1)
     silent inoremap <silent> <Tab>   <C-n>
     silent inoremap <silent> <S-Tab> <C-p>
+    silent inoremap <silent> <Down>  <C-n>
+    silent inoremap <silent> <Up>    <C-p>
 
     " a command to restore to original text and select the first match
     return (s:behavsCurrent[s:iBehavs].command =~# "\<C-p>" ? "\<C-n>\<Up>"
@@ -413,6 +415,9 @@ function s:finishPopup(fGroup1)
     let shift_tab_rhs     = s:original_tab.rhs
     silent execute "i" . shift_tab_noremap . shift_tab_silent . shift_tab_expr . shift_tab_buffer . " <S-Tab>" . shift_tab_rhs
   endif
+
+  inoremap <Down> <Down>
+  inoremap <Up>   <Up>
 
   let s:behavsCurrent = []
   call s:restoreTempOptions(s:GROUP0)
