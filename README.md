@@ -1,9 +1,13 @@
 acp-forked
 ==========
 
-This is a fork of AutoComplPop that adds JavaScript and PHP support.
+Acp-forked is a personal fork of and old version of [AutoComplPop](https://github.com/vim-scripts/AutoComplPop) by Takeshi NISHIDA.
 
-I've also added the ability to use `<Tab>` and `<S-Tab>` for `<C-n>` and
-`<C-p>` respectively so that I don't have to hit `<CR>` to validate a choice.
+My (hacky) modifications are:
 
-`<Down>` and `<Up>` are remapped too.
+* added JavaScript support,
+* added PHP support,
+* made `<up>` and `<Down>` work like `<C-p>` and `<C-n>` respectively in the popup menu,
+* made `<S-Tab>` and `<Tab>` work like `<C-p>` and `<C-n>` respectively in the popup menu.
+
+[This](https://bitbucket.org/ns9tks/vim-autocomplpop/) is the real deal.
